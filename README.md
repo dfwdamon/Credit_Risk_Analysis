@@ -14,8 +14,7 @@ The Techniques:
 Using bulleted lists, describe the balanced accuracy scores and the precision and recall scores of all six machine learning models. Use screenshots of your outputs to support your results.
 
 ### OverSampled
-
-  - Naive Random Oversampling results: This produced an accuracy score of 62%.  Note the classification_report_imbalanced displays disparity when it comes to the precision and recall (Sensitivity) and impacts the f1 score.  This shows the model is more accurate then it may actually be.  The model seems to not predicting the  true difference between high and low risk credit scores.
+- Naive Random Oversampling results: This produced an accuracy score of 62%.  Note the classification_report_imbalanced displays disparity when it comes to the precision and recall (Sensitivity) and impacts the f1 score.  This shows the model is more accurate then it may actually be.  The model seems to not predicting the  true difference between high and low risk credit scores.
   
 <p align="center">  
 <img src="https://github.com/dfwdamon/Credit_Risk_Analysis/blob/main/balancedrf.png" />
@@ -29,23 +28,23 @@ Using bulleted lists, describe the balanced accuracy scores and the precision an
     <br>  </br>
 </p>
 
-- ### UnderSampled
-  - UnderSampling with Cluster Centroids Algorithm results: This method is the inverse of OverSampling, and downscales of large class to match the minority class. The accuracy is 62% but appears there is more bias looking at the classification results.  Recall percentages for High_Risk is 59% and Low_Risk is 42% indicating the minority class forced the dataset into containing majority of high risk scores.  This is a false sense of accuracy as the information seesm to be degraded. 
+### UnderSampled
+- UnderSampling with Cluster Centroids Algorithm results: This method is the inverse of OverSampling, and downscales of large class to match the minority class. The accuracy is 62% but appears there is more bias looking at the classification results.  Recall percentages for High_Risk is 59% and Low_Risk is 42% indicating the minority class forced the dataset into containing majority of high risk scores.  This is a false sense of accuracy as the information seesm to be degraded. 
 
 <p align="center">
 <img src="https://github.com/dfwdamon/Credit_Risk_Analysis/blob/main/undersampling.png"/>
     <br>  </br>
 </p>
 
-- ### Combination (Over and Under) Sampling
-  - SMOTEENN algorithm: SMOTEENN combines the SMOTE and Edited Nearest Neighbors (ENN) algorithms.  The results is an accuracy score of 64.% and the low risk recall value is  low at (0.57).  The f1 score of (0.72) indicates the data is more accurate, and the result is much improved to other model results.
+### Combination (Over and Under) Sampling
+- SMOTEENN algorithm: SMOTEENN combines the SMOTE and Edited Nearest Neighbors (ENN) algorithms.  The results is an accuracy score of 64.% and the low risk recall value is  low at (0.57).  The f1 score of (0.72) indicates the data is more accurate, and the result is much improved to other model results.
  
 <p align="center">
 <img src="https://github.com/dfwdamon/Credit_Risk_Analysis/blob/main/combination.png"/>
    <br>  </br>
 </p>
 
-- ### Balanced Random Forest Classifier 
+### Balanced Random Forest Classifier 
 - The balanced accuracy score result is 78% with an f1 score that rises to (0.95).  This method of grouping data has similarities to Random OverSampling since we are overfitting the data to deal with class imbalance.  
 
 <p align="center">
@@ -53,8 +52,8 @@ Using bulleted lists, describe the balanced accuracy scores and the precision an
    <br>  </br>
 </p>
 
-- ### Easy Ensemble AdaBoost Classifier:
-The Easy EnsembleAdaBoost classifier results in an accuracy score of 78% and f1 score of even higher (0.97) than the Balanced Random Foreset Classifier.  It should be noted the low risk precision is 1.00 and oversampling effects here should be considered in how the algorithm is applied to the dataset. 
+### Easy Ensemble AdaBoost Classifier:
+- The Easy EnsembleAdaBoost classifier results in an accuracy score of 78% and f1 score of even higher (0.97) than the Balanced Random Foreset Classifier.  It should be noted the low risk precision is 1.00 and oversampling effects here should be considered in how the algorithm is applied to the dataset. 
 
 <p align="center">
 <img src="https://github.com/dfwdamon/Credit_Risk_Analysis/blob/main/easy_ensemble.png"/>
@@ -62,9 +61,10 @@ The Easy EnsembleAdaBoost classifier results in an accuracy score of 78% and f1 
 </p>
 
 ## Summary
-The four models we undersampled, oversampled and applied a combination to determine which model is best at predicting the high risk loans. The fifth and sixth models resampled the data using ensemble classifiers to predict if loans are high or low risk. The first four models had accuracy score that was not as high as the ensemble classifiers, and the recall in the oversampling/undersampling/mixed models is also low. 
+In the four models we undersampled, oversampled and applied a combination of models to determine which ML model is best at predicting the high risk loans. The fifth and sixth models resampled the data using ensemble classifiers to predict if loans are high or low risk. The first four models had accuracy scores that were overall noticeably lower than the ensemble classifiers, and the recall in the oversampling/undersampling/mixed models was also low. 
 
-The SMOTE and SMOTEENN seem to mitigate the imbalances of the class identifiers and result in better f1 scoring, but each have 
-effects of over and undersampling.  Balanced recall and precision help raise f1 scores for accuracy measurement. 
+The SMOTE and SMOTEENN seem to mitigate the imbalances of the class identifiers and result in better f1 scoring, but each have effects of over and undersampling.  However, the balanced recall and precision scores help to raise the f1 scores for the accuracy measurement overall. 
 
-It is recommended to implement the EasyEnsemble Classifiers with AdaBoosting due to the higher f1 score, and the balance of precision of recall from this dataset, and the process of removing similiar errors through iterations does not eliminate error.  It should be noted that the accuracy of the dataset should be verified in part to ensure invalid or fraudulent data is not included in the set, and to minimize the end result of using these machine learning classifiers for determining real world decision making of credit risk.  A system of monitoring the inputs of future loan data could help to ensure the application of this model continues to be valid in assessing loan prediction risk as other factors and risk levels could shift and present negative outcomes. 
+It is recommended to implement the EasyEnsemble Classifiers with AdaBoosting due to the higher f1 score and the balance of precision of recall from this dataset.  Note the process of removing similiar errors through iterations does not eliminate error.  
+
+It should be noted that the accuracy of the dataset should be verified in part to ensure invalid or fraudulent data is not included, and to minimize the end result of using these machine learning classifiers for determining real world decision making of credit risk.  A system of monitoring the inputs of future loan data could help to ensure the application of this model continues to be valid in assessing loan prediction risk as other factors such as market and other risks could cause a shift and present negative outcomes. 
