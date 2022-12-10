@@ -25,7 +25,7 @@ Using bulleted lists, describe the balanced accuracy scores and the precision an
   - SMOTE Oversampling results: This resampled data produced a 62% accuracy score.  The SMOTE model produced a higher reacall score (0.79) for "low_risk" than the Random OverSampling (0.77) and a higher f1 score.  Each method is subject to oversampling effects (random generated data not part of original dataset), yet SMOTE appears to reduce bias when generating data from the minority class from the dataset.
 
 <p align="center">
-<img src="https://github.com/dfwdamon/Credit_Risk_Analysis/SMOTE.png"/>
+<img src="https://github.com/dfwdamon/Credit_Risk_Analysis/blob/main/SMOTE.png"/>
     <br>  </br>
 </p>
 
@@ -33,7 +33,7 @@ Using bulleted lists, describe the balanced accuracy scores and the precision an
   - UnderSampling with Cluster Centroids Algorithm results: This method is the inverse of OverSampling, and downscales of large class to match the minority class. The accuracy is 62% but appears there is more bias looking at the classification results.  Recall percentages for High_Risk is 59% and Low_Risk is 42% indicating the minority class forced the dataset into containing majority of high risk scores.  This is a false sense of accuracy as the information seesm to be degraded. 
 
 <p align="center">
-<img src="https://github.com/dfwdamon/Credit_Risk_Analysis/undersampling.png"/>
+<img src="https://github.com/dfwdamon/Credit_Risk_Analysis/blob/main/undersampling.png"/>
     <br>  </br>
 </p>
 
@@ -41,7 +41,7 @@ Using bulleted lists, describe the balanced accuracy scores and the precision an
   - SMOTEENN algorithm: SMOTEENN combines the SMOTE and Edited Nearest Neighbors (ENN) algorithms.  The results is an accuracy score of 64.% and the low risk recall value is  low at (0.57).  The f1 score of (0.72) indicates the data is more accurate, and the result is much improved to other model results.
  
 <p align="center">
-<img src="https://github.com/dfwdamon/Credit_Risk_Analysis/combination.png"/>
+<img src="https://github.com/dfwdamon/Credit_Risk_Analysis/blob/main/combination.png"/>
    <br>  </br>
 </p>
 
@@ -49,7 +49,7 @@ Using bulleted lists, describe the balanced accuracy scores and the precision an
 - The balanced accuracy score result is 78% with an f1 score that rises to (0.95).  This method of grouping data has similarities to Random OverSampling since we are overfitting the data to deal with class imbalance.  
 
 <p align="center">
-<img src="https://github.com/dfwdamon/Credit_Risk_Analysis/balancedrf.png"/>
+<img src="https://github.com/dfwdamon/Credit_Risk_Analysis/blob/main/balancedrf.png"/>
    <br>  </br>
 </p>
 
@@ -57,7 +57,7 @@ Using bulleted lists, describe the balanced accuracy scores and the precision an
 The Easy EnsembleAdaBoost classifier results in an accuracy score of 78% and f1 score of even higher (0.97) than the Balanced Random Foreset Classifier.  It should be noted the low risk precision is 1.00 and oversampling effects here should be considered in how the algorithm is applied to the dataset. 
 
 <p align="center">
-<img src="https://github.com/dfwdamon/Credit_Risk_Analysis/easy_ensemble.png"/>
+<img src="https://github.com/dfwdamon/Credit_Risk_Analysis/blob/main/easy_ensemble.png"/>
    <br>  </br>
 </p>
 
