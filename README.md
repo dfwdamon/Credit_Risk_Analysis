@@ -18,7 +18,7 @@ Using bulleted lists, describe the balanced accuracy scores and the precision an
   - Naive Random Oversampling results: This produced an accuracy score of 62%.  Note the classification_report_imbalanced displays disparity when it comes to the precision and recall (Sensitivity) and impacts the f1 score.  This shows the model is more accurate then it may actually be.  The model seems to not predicting the  true difference between high and low risk credit scores.
   
 <p align="center">  
-<img src="https://github.com/dfwdamon/Credit_Risk_Analysis/oversampling" />
+<img src="https://github.com/dfwdamon/Credit_Risk_Analysis/blob/main/balancedrf.png" />
   <br>  </br>
 </p>
 
